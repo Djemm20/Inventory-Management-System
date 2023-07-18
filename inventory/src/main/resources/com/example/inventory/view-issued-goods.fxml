@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inventory.ViewIssuedGoodsController">
+    <top>
+        <AnchorPane prefHeight="60.0" prefWidth="1000.0" style="-fx-background-color: #179542;" BorderPane.alignment="CENTER">
+            <children>
+                <Button layoutX="33.0" layoutY="14.0" mnemonicParsing="false" onAction="#viewVendorOnAction" prefHeight="10.0" prefWidth="106.0" style="-fx-background-color: #179542; -fx-background-radius: 0; -fx-border-width: 0;" text="View Vendors">
+                    <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                    </font>
+                </Button>
+                <Button layoutX="180.0" layoutY="14.0" mnemonicParsing="false" onAction="#addGoodsOnAction" style="-fx-background-color: #179542; -fx-background-radius: 0; -fx-border-width: 0;" text="Add Goods">
+                    <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                    </font>
+                </Button>
+                <Button layoutX="334.0" layoutY="14.0" mnemonicParsing="false" onAction="#viewGoodsOnAction" style="-fx-background-color: #179542; -fx-background-radius: 0; -fx-border-width: 0;" text="View Goods">
+                    <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                    </font>
+                </Button>
+                <Button layoutX="475.0" layoutY="14.0" mnemonicParsing="false" onAction="#viewBills" style="-fx-background-color: #179542; -fx-background-radius: 0; -fx-border-width: 0;" text="View Bills">
+                    <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                    </font>
+                </Button>
+                <Button layoutX="614.0" layoutY="13.0" mnemonicParsing="false" onAction="#issueGoodsOnAction" style="-fx-background-color: #179542; -fx-background-radius: 0; -fx-border-width: 0;" text="Issued Goods">
+                    <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                    </font>
+                </Button>
+                <Button layoutX="751.0" layoutY="13.0" mnemonicParsing="false"  onAction="#viewIssuedGoods" style="-fx-background-color: #179542; -fx-background-radius: 0; -fx-border-width: 0;" text="View Issued Goods">
+                    <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </top>
+    <center>
+        <TableView fx:id="itable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="iid" prefWidth="72.66666412353516" style="-fx-alignment: center;" text="ID" />
+                <TableColumn fx:id="iname" minWidth="0.0" prefWidth="135.00003051757812" style="-fx-alignment: center;" text="Goods Name" />
+                <TableColumn fx:id="icategory" prefWidth="135.00003051757812" style="-fx-alignment: center;" text="Category" />
+                <TableColumn fx:id="iquantity" prefWidth="135.00003051757812" style="-fx-alignment: center;" text="Quantity" />
+                <TableColumn fx:id="icost" prefWidth="135.00003051757812" style="-fx-alignment: center;" text="Cost Price Per Item" />
+                <TableColumn fx:id="isell" prefWidth="135.00003051757812" style="-fx-alignment: center;" text="Selling Price Per Item" />
+                <TableColumn fx:id="idate" prefWidth="135.00003051757812" style="-fx-alignment: center;" text="Issued On" />
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <AnchorPane prefHeight="63.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button layoutX="310.0" layoutY="19.0" mnemonicParsing="false" onAction="#addGoods" text="Issue Goods">
+                    <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="578.0" layoutY="19.0" mnemonicParsing="false" onAction="#removeGoodsOnAction" text="Remove Issued Goods">
+                    <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </bottom>
+</BorderPane>

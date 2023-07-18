@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inventory.AddVendorController">
+   <children>
+      <AnchorPane prefHeight="60.0" prefWidth="1000.0" style="-fx-background-color: #179542;">
+         <children>
+            <HBox prefHeight="60.0" prefWidth="1000.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#viewVendorOnAction" prefHeight="10.0" prefWidth="106.0" style="-fx-background-color: #179542; -fx-background-radius: 0; -fx-border-width: 0;" text="View Vendors">
+                     <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" right="13.0" top="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#addGoodsOnAction" style="-fx-background-color: #179542; -fx-background-radius: 0; -fx-border-width: 0;" text="Add Goods">
+                     <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" right="13.0" top="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#viewGoodsOnAction" style="-fx-background-color: #179542; -fx-background-radius: 0; -fx-border-width: 0;" text="View Goods">
+                     <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" right="13.0" top="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#viewBills" style="-fx-background-color: #179542; -fx-background-radius: 0; -fx-border-width: 0;" text="View Bills">
+                     <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" right="13.0" top="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#issueGoodsOnAction" style="-fx-background-color: #179542; -fx-background-radius: 0; -fx-border-width: 0;" text="Issue Goods">
+                     <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" right="13.0" top="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#viewIssueGoods" style="-fx-background-color: #179542; -fx-background-radius: 0; -fx-border-width: 0;" text="View Issued Goods">
+                     <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" right="13.0" top="15.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <Text fx:id="addVendorLabel" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="1001.4700622558594">
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Text>
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="48.0" prefWidth="240.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First Name">
+                     <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="vfname" prefWidth="220.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="240.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name">
+                     <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="vlname" prefWidth="220.0" />
+               </children>
+               <HBox.margin>
+                  <Insets left="200.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="104.0" prefHeight="40.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="240.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number">
+                     <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="vpnum" prefWidth="220.0" />
+               </children>
+            </VBox>
+            <VBox layoutX="448.0" layoutY="10.0" prefHeight="200.0" prefWidth="240.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email address">
+                     <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="vemail" prefWidth="220.0" />
+               </children>
+               <HBox.margin>
+                  <Insets left="200.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="399.0" prefHeight="40.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="240.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date">
+                     <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                     </font>
+                  </Text>
+                  <DatePicker fx:id="vdate" prefWidth="240.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="240.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Emergency Contact">
+                     <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="vcontact" prefWidth="220.0" />
+               </children>
+               <HBox.margin>
+                  <Insets left="200.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="307.0" prefHeight="42.0" prefWidth="1000.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="addButton" alignment="CENTER" mnemonicParsing="false" onAction="#addButtonOnAction" prefHeight="41.0" prefWidth="107.0" text="Add">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets left="250.0" right="100.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="resetButton" alignment="CENTER" mnemonicParsing="false" onAction="#resetButtonOnAction" prefHeight="56.0" prefWidth="100.0" text="Reset">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets right="100.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox layoutX="710.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="vendorButton" alignment="CENTER" mnemonicParsing="false" onAction="#vendorButtonOnAction" prefHeight="42.0" prefWidth="100.0" text="View Vendors">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

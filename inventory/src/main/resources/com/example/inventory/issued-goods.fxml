@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inventory.IssueGoodsController">
+    <children>
+        <AnchorPane prefHeight="60.0" prefWidth="1000.0" style="-fx-background-color: #179542;">
+            <children>
+                <Button layoutX="33.0" layoutY="14.0" mnemonicParsing="false" onAction="#viewVendorOnAction" prefHeight="10.0" prefWidth="106.0" style="-fx-background-color: #179542; -fx-background-radius: 0; -fx-border-width: 0;" text="View Vendors">
+                    <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                    </font>
+                </Button>
+                <Button layoutX="180.0" layoutY="14.0" mnemonicParsing="false" onAction="#addGoodsOnAction" style="-fx-background-color: #179542; -fx-background-radius: 0; -fx-border-width: 0;" text="Add Goods">
+                    <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                    </font>
+                </Button>
+                <Button layoutX="334.0" layoutY="14.0" mnemonicParsing="false" onAction="#viewGoodsOnAction" style="-fx-background-color: #179542; -fx-background-radius: 0; -fx-border-width: 0;" text="View Goods">
+                    <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                    </font>
+                </Button>
+                <Button layoutX="475.0" layoutY="14.0" mnemonicParsing="false" onAction="#viewBills" style="-fx-background-color: #179542; -fx-background-radius: 0; -fx-border-width: 0;" text="View Bills">
+                    <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                    </font>
+                </Button>
+                <Button layoutX="614.0" layoutY="13.0" mnemonicParsing="false" onAction="#issueGoodsOnAction" style="-fx-background-color: #179542; -fx-background-radius: 0; -fx-border-width: 0;" text="Issue Goods">
+                    <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                    </font>
+                </Button>
+                <Button layoutX="751.0" layoutY="13.0" mnemonicParsing="false" onAction="#viewIssueGoods" style="-fx-background-color: #179542; -fx-background-radius: 0; -fx-border-width: 0;" text="View Issued Goods">
+                    <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <Text fx:id="issueGoodsLabel" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="1001.4700622558594">
+            <font>
+                <Font name="Bell MT" size="15.0" />
+            </font>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </Text>
+        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
+            <children>
+                <VBox prefHeight="48.0" prefWidth="240.0">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Goods Name">
+                            <font>
+                                <Font name="Comic Sans MS" size="14.0" />
+                            </font>
+                        </Text>
+                        <TextField fx:id="iname" prefWidth="220.0" />
+                    </children>
+                </VBox>
+                <VBox prefHeight="200.0" prefWidth="240.0">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Category">
+                            <font>
+                                <Font name="Comic Sans MS" size="14.0" />
+                            </font>
+                        </Text>
+                        <ChoiceBox fx:id="icategory" prefHeight="25.0" prefWidth="246.0">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Beverages" />
+                                    <String fx:value="Bread/Bakery" />
+                                    <String fx:value="Canned/Jarred Goods" />
+                                    <String fx:value="Dairy Product" />
+                                    <String fx:value="Dry/Baking Goods" />
+                                    <String fx:value="Frozen Products" />
+                                    <String fx:value="Meat" />
+                                    <String fx:value="Farm Produce" />
+                                    <String fx:value="Home Cleaners" />
+                                    <String fx:value="Paper Goods" />
+                                    <String fx:value="Home Care" />
+                                </FXCollections>
+                            </items>
+                        </ChoiceBox>
+                    </children>
+                    <HBox.margin>
+                        <Insets left="200.0" />
+                    </HBox.margin>
+                </VBox>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="10.0" layoutY="104.0" prefHeight="40.0" prefWidth="200.0">
+            <children>
+                <VBox prefHeight="200.0" prefWidth="240.0">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cost Price Per Item">
+                            <font>
+                                <Font name="Comic Sans MS" size="14.0" />
+                            </font>
+                        </Text>
+                        <TextField fx:id="icost" prefWidth="220.0" />
+                    </children>
+                </VBox>
+                <VBox layoutX="448.0" layoutY="10.0" prefHeight="200.0" prefWidth="240.0">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Selling Price Per Item">
+                            <font>
+                                <Font name="Comic Sans MS" size="14.0" />
+                            </font>
+                        </Text>
+                        <TextField fx:id="isell" prefWidth="220.0" />
+                    </children>
+                    <HBox.margin>
+                        <Insets left="200.0" />
+                    </HBox.margin>
+                </VBox>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <VBox.margin>
+                <Insets top="30.0" />
+            </VBox.margin>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="10.0" layoutY="399.0" prefHeight="40.0" prefWidth="200.0">
+            <children>
+                <VBox prefHeight="200.0" prefWidth="240.0">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity">
+                            <font>
+                                <Font name="Comic Sans MS" size="14.0" />
+                            </font>
+                        </Text>
+                        <TextField fx:id="iquantity" prefWidth="220.0" />
+                    </children>
+                </VBox>
+                <VBox prefHeight="200.0" prefWidth="240.0">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Issued On">
+                            <font>
+                                <Font name="Comic Sans MS" size="14.0" />
+                            </font>
+                        </Text>
+                        <DatePicker fx:id="iissued" prefWidth="240.0" />
+                    </children>
+                    <HBox.margin>
+                        <Insets left="200.0" />
+                    </HBox.margin>
+                </VBox>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <VBox.margin>
+                <Insets top="30.0" />
+            </VBox.margin>
+        </HBox>
+        <HBox layoutX="10.0" layoutY="307.0" prefHeight="42.0" prefWidth="1000.0">
+            <children>
+                <VBox prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <Button fx:id="issueButton" alignment="CENTER" mnemonicParsing="false" onAction="#issueButtonOnAction" prefHeight="100.0" prefWidth="100.0" text="Issue">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <font>
+                                <Font name="Comic Sans MS" size="13.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <HBox.margin>
+                        <Insets left="250.0" right="100.0" />
+                    </HBox.margin>
+                </VBox>
+                <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <Button fx:id="resetButton" alignment="CENTER" mnemonicParsing="false" onAction="#resetButtonOnAction" prefHeight="100.0" prefWidth="100.0" text="Reset">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <font>
+                                <Font name="Comic Sans MS" size="13.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <HBox.margin>
+                        <Insets right="100.0" />
+                    </HBox.margin>
+                </VBox>
+                <VBox layoutX="710.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <Button fx:id="issuedGoodsButton" alignment="CENTER" mnemonicParsing="false" onAction="#issuedGoodsButtonOnAction" prefHeight="100.0" prefWidth="100.0" text="View Issued Goods">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <font>
+                                <Font name="Comic Sans MS" size="13.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+            <VBox.margin>
+                <Insets top="30.0" />
+            </VBox.margin>
+        </HBox>
+    </children>
+</VBox>
